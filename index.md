@@ -1,4 +1,4 @@
-## Welcome
+## Welcome!
 
 [DragonScript Arena (beta)](http://dragonscriptarena.com) - the programming strategy game and coding club
 
