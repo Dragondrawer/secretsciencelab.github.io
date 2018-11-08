@@ -6,7 +6,7 @@ We're going to take a trip down memory lane, starting with the early days of the
 This will give you the basics and a good foundation. 
 That way, you'll better understand and appreciate present-day tech when we get to it in a few sessions.
 
-<iframe width="1128" height="635" src="https://www.youtube.com/embed/jgw1XBNY5Ko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[https://img.youtube.com/vi/jgw1XBNY5Ko/0.jpg](https://www.youtube.com/watch?v=jgw1XBNY5Ko)
 
 - 11.15 Start with local file HTML, open in browser 
 - 13.44 Introduce HTML syntax
