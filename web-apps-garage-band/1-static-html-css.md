@@ -11,9 +11,9 @@ That way, you'll better understand and appreciate present-day tech when we get t
 - 11.15 Start with local file HTML, open in browser 
 - 13.44 Introduce HTML syntax
 - 20:30 Make new page, link to other pages
-- 30:50 <div>
+- 30:50 `<div>`
 - 37:34 separating content and style
-- 40:10 CSS in <head>
+- 40:10 CSS in `<head>`
 - 42:31 changing body font
 - 51:40 h1 h2 h3
 - 56:16 # vs . (id vs class)
