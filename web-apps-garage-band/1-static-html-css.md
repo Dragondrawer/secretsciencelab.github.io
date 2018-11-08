@@ -6,7 +6,6 @@ We're going to take a trip down memory lane, starting with the early days of the
 This will give you the basics and a good foundation. 
 That way, you'll better understand and appreciate present-day tech when we get to it in a few sessions.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]
 [![Jam Session #1](1-static-html-css.PNG)](https://www.youtube.com/watch?v=jgw1XBNY5Ko)
 
 - 11.15 Start with local file HTML, open in browser 
