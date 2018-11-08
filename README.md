@@ -1,2 +1,1 @@
-# Secret Science Laboratory
-:)
+# Welcome to the Secret Science Laboratory
