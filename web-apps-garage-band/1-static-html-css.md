@@ -23,7 +23,7 @@ That way, you'll better understand and appreciate present-day tech when we get t
 - 1:18:00 embed youtube video
 
 
-Once you feel good about your local changes, it's time to put it up on the Internet. Then your website will be LIVE and visible by anyone, anywhere in the world.
+Once you feel good about your local changes, it's time to put it up on the Internet. Then your website will be LIVE and visible by anyone from anywhere in the world.
 
 
 How to host your page live on the Internet (for free):
