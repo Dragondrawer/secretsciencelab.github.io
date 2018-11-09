@@ -33,5 +33,7 @@ How to host your page live on the Internet (for free):
 3. Give the repository the special name `username.github.io` (where “username” is your GitHub user name):
   [![Set special repository name](https://guides.github.com/features/pages/create-new-repo-screen.png)]
 4. That's it! Now any page you put in this repository will appear online. 
-    For example, if you put your hello.html in your `username.github.io` repository, it will appear online @ http://username.github.io/hello.html.
+    For example, if you put your hello.html page in your `username.github.io` repository, it will appear online @ http://username.github.io/hello.html. 
+    
+For more information, see [https://pages.github.com/](https://pages.github.com/) or [https://guides.github.com/features/pages/](https://guides.github.com/features/pages/)
    
