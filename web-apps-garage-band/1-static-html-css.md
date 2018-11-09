@@ -23,10 +23,10 @@ That way, you'll better understand and appreciate present-day tech when we get t
 - 1:18:00 embed youtube video
 
 
-Once you feel good about your local changes, it's time to put it up on the Internet. That way your website will be live and the whole world can see it. 
+Once you feel good about your local changes, it's time to put it up on the Internet. Then your website will be LIVE and visible by anyone, anywhere in the world.
+
 
 How to host your page live on the Internet (for free):
-- I recommend using Github Pages
 1. Make a Github account @ [github.com](https://github.com/) and sign in
 2. Click to make a new repository:
    [![Make new repository](https://guides.github.com/features/pages/create-new-repo-button.png)]
