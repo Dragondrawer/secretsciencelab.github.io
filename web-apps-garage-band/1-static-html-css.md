@@ -26,7 +26,7 @@ That way, you'll better understand and appreciate present-day tech when we get t
 
 Once you feel good about your local changes, it's time to put it up on the Internet. Then your website will be LIVE and visible by anyone from anywhere in the world!
 
-### How to host your page live on the Internet (for free):
+### How to host your page live on the Internet (for free)
 1. Make a Github account @ [github.com](https://github.com/) and sign in
 
 2. Click to make a new repository:
