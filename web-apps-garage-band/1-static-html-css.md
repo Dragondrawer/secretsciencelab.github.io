@@ -28,10 +28,14 @@ Once you feel good about your local changes, it's time to put it up on the Inter
 
 ### How to host your page live on the Internet (for free):
 1. Make a Github account @ [github.com](https://github.com/) and sign in
+
 2. Click to make a new repository:
+
    ![Make new repository](https://guides.github.com/features/pages/create-new-repo-button.png)
 3. Give the repository the special name `username.github.io` (where “username” is your GitHub user name):
+
   ![Set special repository name](https://guides.github.com/features/pages/create-new-repo-screen.png)
+  
 4. That's it! Now any page you put in this repository will appear online. 
     For example, if you put your `hello.html` page in your `your_username.github.io` repository, it will appear online @ `http://your_username.github.io/hello.html` 
     
