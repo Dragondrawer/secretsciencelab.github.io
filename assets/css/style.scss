@@ -2,3 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
+
+#main_content h2 {
+  margin-top: 40px;
+}
