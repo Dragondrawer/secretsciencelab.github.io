@@ -23,6 +23,67 @@ That way, you'll better understand and appreciate present-day tech when we get t
 - 1:08:00 images
 - 1:18:00 embed youtube video
 
+### Code used in Jam Session #1
+
+```
+<html>
+ <head>
+  <style>
+   body {
+    font-family: helvetica;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+   }
+   div {
+     color: green;
+   }
+   .content {
+     font-family: monospace;
+     font-size: 30px;
+     color: red;
+   }
+
+   a { 
+     text-decoration: none;
+   }
+   a:hover {
+     text-decoration: underline;
+   }
+
+   img {
+     max-width: 400px;
+     border: 5px solid black;
+   }
+   #bottom-image {
+     border: 5px solid blue;
+   }
+  </style>
+ </head>
+ 
+ <body>
+  <h1>Jam Session #1</h1>
+
+  <div><b>HELLO EVERYBODY!</b></div>
+
+  Check out my video:
+  <iframe width="658" height="370" src="https://www.youtube.com/embed/hdWkpbPTpmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <img id="top-image" src="https://i.ytimg.com/vi/Yj7ja6BANLM/maxresdefault.jpg"></img>
+  <img id="bottom-image" src="https://media.discordapp.net/attachments/498679536721068033/508511491817996288/Code.png?width=579&height=294"></img>
+
+  <div id="my-stuff"> STUFF </div>
+
+  <div class="content"> CONTENT 1 </div>
+
+  <div class="content"> CONTENT 2 </div>
+
+  <div><a href="page2.html">Click this to go to page 2</a></div>
+  <div><a href="page3.html">Awesome page three ahead</a></div>
+ </body>
+</html>
+```
+
 
 Once you feel good about your local changes, it's time to put it up on the Internet. Then your website will be LIVE and visible by anyone from anywhere in the world!
 
