@@ -11,11 +11,6 @@
         font-size: xx-large;
       }
 
-      .paragraph {
-        font-style: italic;
-        margin: 20px;
-      }
-
       #clickme {
         border: 1px solid black;
         background-color: blue;
@@ -25,35 +20,35 @@
         display: inline-block;
         cursor: pointer;
       }
+
+      #clicks {
+        font-size: 200px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <div id=header>Welcome</div> 
+    <div id=header>Welcome to our browser game</div> 
 
-    <div class=paragraph>
-      Some text
-      Some text
-      Some text
-      Some text
-    </div> 
-    <div class=paragraph>
-      Some text 2
-      Some text 2
-      Some text 2
-      Some text 2
-    </div> 
+    <div id=clicks>0</div>
+
 
     <div id="clickme">Click Me</div>
 
     <script>
-      function runThisWhenClicked() {
-        alert( "HEHE THAT TICKLES!" );
-      }
+      var clickCounter = 0;
 
       // add click handler for button
-      $("#clickme").click(runThisWhenClicked);
+      $("#clickme").click(function() {
+          console.log( "HEHE THAT TICKLES!" );
+          clickCounter += 1;          
+
+          $("#clicks").html(clickCounter);
+      });
 
       
     </script>
