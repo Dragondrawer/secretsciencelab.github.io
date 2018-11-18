@@ -43,6 +43,7 @@
 
     <img id="egg" class="card" src="https://i.pinimg.com/originals/fc/b6/26/fcb626adad3e8e565f7ccb851d6a1b71.jpg"></img>
     <img id="hatchling" class="card" src="https://images-na.ssl-images-amazon.com/images/I/71FuuVDNbmL._SX425_.jpg"></img>
+    <img id="adult" class="card" src="https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/26/1000/1000/636238962276510242.jpeg"></img>
 
     <div class="wrapper">
       <div id="clickme">Click Me</div>
@@ -62,10 +63,15 @@
           $("#clicks").html(clickCounter);
 
           // change picture after some clicks
-          if (clickCounter > 10)
+          if (clickCounter > 10 && clickCounter < 20)
           {
             $(".card").hide();
             $("#hatchling").show();
+          }
+          else if (clickCounter > 20)
+          {
+            $(".card").hide();
+            $("#adult").show();
           }
               
         }
