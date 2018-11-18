@@ -1,3 +1,16 @@
+# Jam session #2
+
+"Web 1.5" 
+
+In this session we go over how to make dynamic web pages. We'll look at how to make a Javascript Web UI and use our new skills to make a simple browser game.
+
+[![Jam Session #2](2-js-webui-simple-game.png)](https://www.youtube.com/watch?v=IpXA53_YUSk)
+
+## Index
+(coming soon)
+
+## Code used in Jam Session #2
+
 ```
 <html>
   <head>
