@@ -25,13 +25,13 @@
 
       parent.postMessage(JSON.stringify({
         "topic": "saved"
-      }), window.location.protocol + "//" + window.location.host);
+      }), "*");
     }
 
     $(document).ready(function() {
       parent.postMessage(JSON.stringify({
         "topic": "ready"
-      }), window.location.protocol + "//" + window.location.host);
+      }), "*");
     });
 
   </script>
