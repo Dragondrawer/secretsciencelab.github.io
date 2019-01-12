@@ -3,34 +3,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  </head>
  <body>
-  <input type="hidden" id="data"></input>
-
   <script>
     // load from session storage
     var sessionData = window.sessionStorage.getItem("data");
-    if (sessionData)
-      $("#data").val(sessionData);
 
     window.addEventListener("message", receiveMessage, false);
 
     function receiveMessage(event)
     {
       //console.log("origin: " + event.origin);  
-      //console.log(event.source);  
-      //console.log(event.data);
+      //console.log("source: " + event.source);  
+      //console.log("data: " + event.data);
 
       // save to session storage
-      $("#data").val(event.data);
       window.sessionStorage.setItem("data", event.data);
+      sessionData = event.data;
 
       parent.postMessage(JSON.stringify({
-        "topic": "saved"
+        "topic": "saved",
+        "data": sessionData
       }), "*");
     }
 
     $(document).ready(function() {
       parent.postMessage(JSON.stringify({
-        "topic": "ready"
+        "topic": "ready",
+        "data": sessionData
       }), "*");
     });
 
