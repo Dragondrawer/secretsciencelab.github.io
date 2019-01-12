@@ -1,0 +1,38 @@
+<html>
+ <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <input type="hidden" id="data"></input>
+
+  <script>
+    // load from session storage
+    var sessionData = window.sessionStorage.getItem("data");
+    if (sessionData)
+      $("#data").val(sessionData);
+
+    window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+      //console.log("origin: " + event.origin);  
+      //console.log(event.source);  
+      //console.log(event.data);
+
+      // save to session storage
+      $("#data").val(event.data);
+      window.sessionStorage.setItem("data", event.data);
+
+      var obj = JSON.parse(event.data);
+      if (obj.callback && parent._scBgFrameCallbacks)
+        parent._scBgFrameCallbacks[obj.callback]();
+    }
+
+    $(document).ready(function() {
+      if (parent._scBgFrameLoaded)
+        parent._scBgFrameLoaded();
+    });
+
+  </script>
+ </body>
+</html>
