@@ -7,7 +7,19 @@ In this session we go over how to make dynamic web pages. We'll look at how to m
 [![Jam Session #2](2-js-webui-simple-game.png)](https://www.youtube.com/watch?v=IpXA53_YUSk)
 
 ## Index
-(coming soon)
+
+- 7:27 include jQuery
+- 11:55 add `<script>` section
+- 12:31 `alert()`
+- 16:45 F12 console
+- 17:20 `console.log()`
+- 20:23 `#` and `.` selectors
+- 23:09 `.html()`
+- 25:36 `.css()`
+- 29:00 event handlers
+- 33:17 `.click()`
+- 49:13 simple clicker browser game
+
 
 ## Code used in Jam Session #2
 
