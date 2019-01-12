@@ -23,14 +23,15 @@
       $("#data").val(event.data);
       window.sessionStorage.setItem("data", event.data);
 
-      var obj = JSON.parse(event.data);
-      if (obj.callback && parent._scBgFrameCallbacks)
-        parent._scBgFrameCallbacks[obj.callback]();
+      parent.postMessage(JSON.stringify({
+        "topic": "saved"
+      }), window.location.protocol + "//" + window.location.host);
     }
 
     $(document).ready(function() {
-      if (parent._scBgFrameLoaded)
-        parent._scBgFrameLoaded();
+      parent.postMessage(JSON.stringify({
+        "topic": "ready"
+      }), window.location.protocol + "//" + window.location.host);
     });
 
   </script>
