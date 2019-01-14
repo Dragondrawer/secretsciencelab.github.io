@@ -14,8 +14,8 @@
  </head>
  <body>
   <script>
-    // load from session storage
-    var sessionData = window.sessionStorage.getItem("data");
+    // load from browser storage
+    var browserData = window.localStorage.getItem("data");
 
     window.addEventListener("message", receiveMessage, false);
 
@@ -25,20 +25,20 @@
       //console.log("source: " + event.source);  
       //console.log("data: " + event.data);
 
-      // save to session storage
-      window.sessionStorage.setItem("data", event.data);
-      sessionData = event.data;
+      // save to browser storage
+      window.localStorage.setItem("data", event.data);
+      browserData = event.data;
 
       parent.postMessage(JSON.stringify({
         "topic": "saved",
-        "data": sessionData
+        "data": browserData
       }), "*");
     }
 
     $(document).ready(function() {
       parent.postMessage(JSON.stringify({
         "topic": "ready",
-        "data": sessionData
+        "data": browserData
       }), "*");
     });
 
