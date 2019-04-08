@@ -93,9 +93,8 @@
       set: function(key, value) {
         $.post("https://secretsciencelab.appspot.com/fpstore/set", { data: value });
       },
-      get: function(key) {
+      get: function(key, cb) {
         $.ajax({
-          async: false,
           type: "GET",
           url: "https://secretsciencelab.appspot.com/fpstore/get",
           dataType: "json",
@@ -103,10 +102,11 @@
             if (response && response.data)
             {
               console.log("FingerPrintStore got " + response.data);
-              return response.data;
+              cb(response.data);
+              return;
             }
 
-            return "";
+            cb("");
           }
         });
       }
@@ -121,12 +121,12 @@
       window.store.set(key, val);
     }
 
-    function datastoreGet(key) {
+    function datastoreGet(key, cb) {
       wsval = window.store.get(key);
       if (wsval)
-        return wsval;
+        cb(wsval);
         
-      return fingerprintStore.get(key);
+      fingerprintStore.get(key, cb);
     }
 
     /* 
@@ -134,10 +134,9 @@
      */
 
     // load from browser storage
-    var browserData = datastoreGet("data");
+    var g_browserData = null;
 
     window.addEventListener("message", receiveMessage, false);
-
     function receiveMessage(event)
     {
       //console.log("origin: " + event.origin);  
@@ -146,19 +145,22 @@
 
       // save to browser storage
       datastoreSet("data", event.data);
-      browserData = event.data;
+      g_browserData = event.data;
 
       parent.postMessage(JSON.stringify({
         "topic": "saved",
-        "data": browserData
+        "data": g_browserData
       }), "*");
     }
 
     $(document).ready(function() {
-      parent.postMessage(JSON.stringify({
-        "topic": "ready",
-        "data": browserData
-      }), "*");
+      datastoreGet("data", function(data) {
+        g_browserData = data;
+        parent.postMessage(JSON.stringify({
+          "topic": "ready",
+          "data": g_browserData
+        }), "*");
+      });
     });
 
   </script>
