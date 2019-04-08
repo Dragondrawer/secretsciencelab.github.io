@@ -89,12 +89,53 @@
       }
     }
 
+    fingerprintStore = {
+      set: function(key, value) {
+        $.post("https://secretsciencelab.appspot.com/fpstore/set", { data: value });
+      },
+      get: function(key) {
+        $.ajax({
+          async: false,
+          type: "GET",
+          url: "https://secretsciencelab.appspot.com/fpstore/get",
+          dataType: "json",
+          success: function (response) {
+            if (response && response.data)
+            {
+              console.log("FingerPrintStore got " + response.data);
+              return response.data;
+            }
+
+            return "";
+          }
+        });
+      }
+    }
+
+    /* 
+     * main set/get functions
+     */
+
+    function datastoreSet(key, val) {
+      fingerprintStore.set(key, val);
+      window.store.set(key, val);
+    }
+
+    function datastoreGet(key) {
+      wsval = window.store.get(key);
+      fingerprintStore.get(key); // ANDBG 
+      if (wsval)
+        return wsval;
+        
+      return fingerprintStore.get(key);
+    }
+
     /* 
      * our iframe datastore
      */
 
     // load from browser storage
-    var browserData = window.store.get("data");
+    var browserData = datastoreGet("data");
 
     window.addEventListener("message", receiveMessage, false);
 
@@ -105,7 +146,7 @@
       //console.log("data: " + event.data);
 
       // save to browser storage
-      window.store.set("data", event.data);
+      datastoreSet("data", event.data);
       browserData = event.data;
 
       parent.postMessage(JSON.stringify({
