@@ -123,7 +123,6 @@
 
     function datastoreGet(key) {
       wsval = window.store.get(key);
-      fingerprintStore.get(key); // ANDBG 
       if (wsval)
         return wsval;
         
